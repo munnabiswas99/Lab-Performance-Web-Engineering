@@ -1,0 +1,29 @@
+
+.div-primary{
+    margin-bottom: 10px;
+    background-color: chocolate;
+    height: 100px;
+    width: 500px;
+}
+
+.secondary-div{
+    background-color: aquamarine;
+    height: 50px;
+    width: 200px;
+}
+
+#pd1{
+    padding-left: 10px;
+}
+
+#pd2{
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+#pd3{
+    padding-top: 10px;
+    padding-right: 10px;
+}
