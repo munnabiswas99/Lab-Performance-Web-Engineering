@@ -1,0 +1,107 @@
+.Navbar{
+    background-color: #e0bca2;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.c1{
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#ac{
+    text-decoration: underline;
+}
+
+#btn-primary{
+    background-color: yellowgreen;
+}
+
+i{
+    padding: 10px;
+}
+
+.cards{
+    padding: 20px;
+}
+
+.card{
+    background-color: #e0bca2;
+    border-radius: 20px;
+    padding: 20px;
+    
+
+}
+
+img{
+    padding: 10px;
+    border-radius: 20px;
+    height: 280px;
+    width: 300px;
+}
+
+.hero{
+    height: 300px;
+    margin: 10px;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    background-color: #3ab081;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+#btn1{
+    background-color: #3ab081;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 200px;
+    margin-left: 1110px;
+}
+
+.dropbtn {
+  font-weight: bold;
+  color: black;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: tomato;}

@@ -1,0 +1,19 @@
+    .box {
+      width: 100px;
+      height: 100px;
+      margin: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 18px;
+      border-radius: 8px;
+    }
+    .even {
+      background-color: orange;
+      color: aqua;
+    }
+    .odd {
+      background-color: green;
+      color: white;
+    }

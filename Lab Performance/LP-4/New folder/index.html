@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <!-- Nab Bar -->
+    <div class="Navbar" style="display: flex ; justify-content:space-between;">
+        <h1 class="c1">Shop With Me</h1>
+        <p class="c1" id="ac">Account</p>
+
+        <!-- dropdown -->
+        <div class="dropdown">
+            <button class="dropbtn">Items</button>
+                <div class="dropdown-content">
+                    <a href="#">Coffe</a>
+                    <a href="#">Burger</a>
+                    <a href="#">Cake</a>
+                </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">Offers</button>
+                <div class="dropdown-content">
+                    <a href="#">Fan-Package</a>
+                    <a href="#">Super Deals</a>
+                    <a href="#">Combo Offers</a>
+                </div>
+        </div>
+
+        <div>
+            <input style="border-radius: 5px; padding: 2px;" type="text" placeholder="Enter your name" name="" id="">
+            <button style="padding: 5px; border-radius: 5px;" id="btn-primary">Search</button>
+        </div>
+        <div>
+        <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"><sub>0</sub></i>
+        </div>
+    </div>
+
+<!-- Hero -->
+<div
+  class="hero"
+  style="background-image: url(https://img.freepik.com/free-vector/special-offer-sale-banner-hexagonal-shape-with-stars_1017-16283.jpg);"
+>
+  <div class="hero-overlay"></div>
+  <div class="hero-content text-neutral-content text-center">
+    <div class="max-w">
+      <button id="btn1" class="btn" onclick="">Order Now</button>
+    </div>
+  </div>
+</div>
+
+    <!-- Cards -->
+    <div class="cards" style="display: flex; justify-content: space-between;">
+        <div class="card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdb5VvlI7KFkpOOH7dt9ZAKMCd_Iof1p531w&s" alt="">
+            <h2>Product 1</h2>
+            <p>Price: $10</p>
+        </div>
+        <div class="card">
+            <img src="https://www.allrecipes.com/thmb/WSSoRAz2IygrMPkiJxHPbt9gqMg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8635-southern-fried-chicken-ddmfs_4x3-90736ab31a7a4bb59eb04e2380ccebe7.jpg" alt="">
+            <h2>Product 2</h2>
+            <p>Price: $20</p>
+        </div>
+        <div class="card">
+            <img src="https://www.netmeds.com/images/cms/wysiwyg/blog/Post/2018/10/coffee_its_benefits_898_1_.jpg" alt="">
+            <h2>Product 3</h2>
+            <p>Price: $30</p>
+        </div>
+            <div class="card">
+            <img src="https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/07/Starbucks_Food_Spinach_Feta_Wrap-1296x728-header.jpg?w=1155&h=1528" alt="">
+            <h2>Product 3</h2>
+            <p>Price: $30</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>@Developed By Munna Biswas</p>
+    </footer>
+
+</body>
+</html>
