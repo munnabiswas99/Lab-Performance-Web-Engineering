@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Form</title>
+  <link rel="stylesheet" href="Style/style2.css">
+</head>
+<body>
+  <form id="studentForm">
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+
+    <label for="batch">Batch & Section:</label>
+    <input type="text" id="batch" placeholder="e.g. 61-J" required>
+
+    <label for="hobbies">Hobbies (comma-separated):</label>
+    <input type="text" id="hobbies" placeholder="e.g. painting, coding, reading, ..." required>
+
+    <label for="pass">Password:</label>
+    <input type="password" id="pass" required>
+
+    <label for="confirmPass">Confirm Password:</label>
+    <input type="password" id="confirmPass" required>
+
+    <button type="submit">Submit</button>
+    <p id="alert"></p>
+  </form>
+
+  <script src="JS/performance.js"></script>
+</body>
+</html>
