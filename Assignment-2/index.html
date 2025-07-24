@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- Nab Bar -->
+    <div class="Navbar" style="display: flex; justify-content: space-between">
+      <h1 class="c1">Shop With Me</h1>
+      <p class="c1" id="ac">Account</p>
+
+      <!-- dropdown -->
+      <div class="dropdown">
+        <button class="dropbtn">Items</button>
+        <div class="dropdown-content">
+          <a href="#">Burger</a>
+          <a href="#">Chicken</a>
+          <a href="#">Coffee</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="dropbtn">Offers</button>
+        <div class="dropdown-content">
+          <a href="#">Fan-Package</a>
+          <a href="#">Super Deals</a>
+          <a href="#">Combo Offers</a>
+        </div>
+      </div>
+
+      <div>
+        <input
+          style="border-radius: 5px; padding-left: 2px"
+          type="text"
+          placeholder="Enter your name"
+          name=""
+          id=""
+        />
+        <button style="padding: 5px; border-radius: 5px" id="btn-primary">
+          Search
+        </button>
+      </div>
+      <div>
+        <i onclick="openNav()" class="fa-solid fa-cart-shopping" style="color: #ffffff; cursor:pointer"
+          ><sub>0</sub></i
+        >
+      </div>
+    </div>
+
+    <!-- Hero -->
+    <div
+      class="hero"
+      style="
+        background-image: url(https://img.freepik.com/free-vector/special-offer-sale-banner-hexagonal-shape-with-stars_1017-16283.jpg);
+      "
+    >
+      <div class="hero-overlay"></div>
+      <div class="hero-content text-neutral-content text-center">
+        <div class="max-w">
+          <button id="btn1" class="btn" onclick="">Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="cards" style="display: flex; justify-content: space-between">
+      <div class="card">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdb5VvlI7KFkpOOH7dt9ZAKMCd_Iof1p531w&s"
+          alt=""
+        />
+        <section class="price-section">
+          <div>
+            <h2 class="itemName">Burger</h2>
+            <p id="discount1"></p>
+            <p id="discoutprice1"></p>
+          </div>
+          <div>
+            <img
+              class="cart-icon"
+              src="https://media.istockphoto.com/id/1206806317/vector/shopping-cart-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=1RRQJs5NDhcB67necQn1WCpJX2YMfWZ4rYi1DFKlkNA="
+              alt=""
+            />
+            <button id="btn2" class="btn">Add to Cart</button>
+          </div>
+        </section>
+      </div>
+      <div class="card">
+        <img
+          src="https://www.allrecipes.com/thmb/WSSoRAz2IygrMPkiJxHPbt9gqMg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/8635-southern-fried-chicken-ddmfs_4x3-90736ab31a7a4bb59eb04e2380ccebe7.jpg"
+          alt=""
+        />
+        <section class="price-section">
+          <div>
+            <h2 class="itemName">Chicken Fry</h2>
+            <p id="discount2"></p>
+            <p id="discoutprice2"></p>
+          </div>
+          <div>
+            <img
+              class="cart-icon"
+              src="https://media.istockphoto.com/id/1206806317/vector/shopping-cart-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=1RRQJs5NDhcB67necQn1WCpJX2YMfWZ4rYi1DFKlkNA="
+              alt=""
+            />
+            <button id="btn3" class="btn">Add to Cart</button>
+          </div>
+        </section>
+      </div>
+      <div class="card">
+        <img
+          src="https://www.everydaydose.com/cdn/shop/articles/Types_of_Lattes.webp?v=1743518832"
+          alt=""
+        />
+        <section class="price-section">
+          <div>
+            <h2 class="itemName">Coffee</h2>
+            <p id="discount3"></p>
+            <p id="discoutprice3"></p>
+          </div>
+          <div>
+            <img
+              class="cart-icon"
+              src="https://media.istockphoto.com/id/1206806317/vector/shopping-cart-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=1RRQJs5NDhcB67necQn1WCpJX2YMfWZ4rYi1DFKlkNA="
+              alt=""
+            />
+            <button id="btn4" class="btn">Add to Cart</button>
+          </div>
+        </section>
+      </div>
+      <div class="card">
+        <img
+          src="https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/07/Starbucks_Food_Spinach_Feta_Wrap-1296x728-header.jpg?w=1155&h=1528"
+          alt=""
+        />
+        <section class="price-section">
+          <div>
+            <h2 class="itemName">Sandwich</h2>
+            <p id="discount4"></p>
+            <p id="discoutprice4"></p>
+          </div>
+          <div>
+            <img
+              class="cart-icon"
+              src="https://media.istockphoto.com/id/1206806317/vector/shopping-cart-icon-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=1RRQJs5NDhcB67necQn1WCpJX2YMfWZ4rYi1DFKlkNA="
+              alt=""
+            />
+            <button id="btn5" class="btn">Add to Cart</button>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Cart   -->
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+      <h2 style="font-weight: bold; margin-left: 2px;">Cart Items</h2>
+      <p id="cartItemPrice"></p>
+      <p id="subTotal" style="font-weight: bold;"></p>
+    </div>
+    <!-- <span style="font-size:30px;" onclick="openNav()">&#9776; open</span> -->
+    
+
+
+    <script src="script.js "></script>
+
+    <footer>
+      <p>@Developed By Munna Biswas</p>
+    </footer>
+  </body>
+</html>
