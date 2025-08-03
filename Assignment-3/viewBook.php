@@ -1,5 +1,5 @@
 <?php
-include 'db.php'; // database connection file
+include 'dbConnection.php'; // database connection file
 
 // Secure delete logic
 if (isset($_GET['delete'])) {
@@ -57,9 +57,9 @@ $books = $conn->query("SELECT * FROM books");
                             <td class="border p-3"><?= htmlspecialchars($book['description']) ?></td>
                             <td class="border p-3 text-center"><?= $book['best_selling'] ? '✅' : '❌' ?></td>
                             <td class="border p-3 space-x-2">
-                                <a href="update_book.php?id=<?= $book['id'] ?>"
+                                <a href="updateBook.php?id=<?= $book['id'] ?>"
                                    class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600">Update</a>
-                                <a href="view_book.php?delete=<?= $book['id'] ?>" class="delete-btn bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Delete</a>
+                                <a href="viewBook.php?delete=<?= $book['id'] ?>" class="delete-btn bg-red-600 text-white px-3 py-1 rounded hover:bg-red-700">Delete</a>
                             </td>
                         </tr>
                     <?php endwhile; ?>

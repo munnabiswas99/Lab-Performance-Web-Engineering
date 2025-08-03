@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include 'dbConnection.php';
 
 if (isset($_POST['submit'])) {
     $title        = $_POST['title'];
@@ -43,7 +43,7 @@ if (isset($_POST['submit'])) {
             <p class="text-gray-500">Fill out the form below to add a new title to your library</p>
         </div>
 
-        <form method="POST" action="add_book.php" class="grid gap-6">
+        <form method="POST" action="addBook.php" class="grid gap-6">
 
             <div>
                 <label class="block mb-1 text-sm font-medium text-gray-700">Book Title</label>

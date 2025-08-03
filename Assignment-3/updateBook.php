@@ -1,5 +1,5 @@
 <?php
-include 'db.php';
+include 'dbConnection.php';
 
 // Fetch existing book
 if (isset($_GET['id'])) {
@@ -28,10 +28,10 @@ if (isset($_POST['update'])) {
             WHERE id=$id";
 
     if ($conn->query($sql)) {
-        header("Location: view_book.php");
+        header("Location: viewBook.php");
         exit();
     } else {
-        echo "<p class='text-red-600 font-bold text-center mt-4'>❌ Update Failed: " . $conn->error . "</p>";
+        echo "<p class='text-red-600 font-bold text-center mt-4'>Update Failed: " . $conn->error . "</p>";
     }
 }
 ?>
@@ -57,7 +57,7 @@ if (isset($_POST['update'])) {
 <body class="bg-gradient-to-br from-gray-100 to-gray-200 min-h-screen flex items-center justify-center px-4">
 
     <div class="bg-white shadow-2xl p-10 rounded-xl w-full max-w-xl border border-gray-200 fade-in">
-        <h2 class="text-3xl font-extrabold mb-6 text-center text-green-700">✏️ Update Book</h2>
+        <h2 class="text-3xl font-extrabold mb-6 text-center text-green-700">Update Book</h2>
 
         <form method="POST" class="space-y-5">
             <input type="hidden" name="id" value="<?= htmlspecialchars($book['id']) ?>">
