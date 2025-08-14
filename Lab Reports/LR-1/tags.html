@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Tags Lab</title>
+    <style>
+        body { font-family: Arial; }
+        .highlight { color: blue; }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My HTML Tags Lab</h1>
+    <p>This is a <span class="highlight">sample webpage</span> demonstrating HTML tags.</p>
+    <img src="image/images.jpeg" alt="Logo" width="100" height="100">
+    <hr>
+
+    <a href="https://google.com" target="">Visit Google</a><br>
+
+    <h2>Lists</h2>
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+    </ul>
+    <ol start="5">
+        <li>Monday</li>
+        <li>Tuesday</li>
+    </ol>
+
+    <h2>Table</h2>
+    <table border="1" width="50%">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Munna</td>
+            <td>23</td>
+        </tr>
+    </table>
+
+    <h2>Form</h2>
+    <form action="submit.html" method="post">
+        <label for="username">Name:</label>
+        <input type="text" id="username" name="username" placeholder="Enter name"><br><br>
+        
+        <label for="message">Message:</label><br>
+        <textarea rows="4" cols="30" id="message" name="message"></textarea><br><br>
+
+        <label for="gender">Gender:</label>
+        <select name="gender" id="gender">
+            <option value="m">Male</option>
+            <option value="f" selected>Female</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Embedded Page</h2>
+    <iframe src="https://example.com" width="300" height="200"></iframe>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Coffee Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: background 0.3s, color 0.3s;
+        }
+        body.dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+        #clock {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1rem;
+        }
+        #cart {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1rem;
+        }
+        /* Dark Mode Button Styling */
+        #darkModeBtn {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 20px;
+            background-color: white;
+            color: #4CAF50;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            transition: background 0.3s, color 0.3s;
+        }
+        #darkModeBtn:hover {
+            background-color: #4CAF50;
+            color: white;
+        }
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #575757;
+        }
+        /* Search Bar Styling */
+        #searchBar {
+            width: 300px;
+            padding: 8px;
+            margin: 15px auto;
+            display: block;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            text-align: center;
+        }
+        main {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+        article {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .coffee-card {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .dark-mode .coffee-card {
+            background: #333;
+        }
+        .coffee-card:hover {
+            transform: scale(1.05);
+        }
+        .coffee-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .coffee-card img:hover {
+            transform: scale(1.1);
+        }
+        .coffee-card h4 {
+            margin: 10px 0;
+        }
+        .coffee-card button {
+            background: #4CAF50;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+        .coffee-card button:hover {
+            background: #45a049;
+        }
+        aside {
+            background: #f4f4f4;
+            padding: 20px;
+        }
+        aside ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        aside ul li {
+            margin: 8px 0;
+        }
+        aside ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        aside ul li a:hover {
+            color: #4CAF50;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span id="cart">🛒 Cart: <span id="cartCount">0</span></span>
+        <h1>My Coffee Shop</h1>
+        <div id="clock"></div>
+        <button id="darkModeBtn" onclick="toggleDarkMode()">Dark Mode</button>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">Contact</a>
+    </nav>
+    <input type="text" id="searchBar" placeholder="Search coffee...">
+    <main>
+        <article id="coffeeMenu">
+            <div class="coffee-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG" alt="Espresso">
+                <h4>Espresso</h4>
+                <button onclick="buyCoffee('Espresso')">Buy Now</button>
+            </div>
+            <div class="coffee-card">
+                <img src="https://livingnomads.com/wp-content/uploads/2019/01/07/Rufous-Coffee-best-cafe-in-taipei-best-coffee-in-taipei-best-coffee-shops-in-taipei-20.jpg" alt="Latte">
+                <h4>Latte</h4>
+                <button onclick="buyCoffee('Latte')">Buy Now</button>
+            </div>
+            <div class="coffee-card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Cappuccino_at_Sightglass_Coffee.jpg" alt="Cappuccino">
+                <h4>Cappuccino</h4>
+                <button onclick="buyCoffee('Cappuccino')">Buy Now</button>
+            </div>
+            <div class="coffee-card">
+                <img src="https://media.istockphoto.com/id/1030018926/photo/coffee-americano-it-made-from-espresso-and-hot-water-uk.jpg?s=612x612&w=0&k=20&c=trsNtjalA6r9eGka845eO1nYOP0yogvLWqBAg-jsBlM=" alt="Americano">
+                <h4>Americano</h4>
+                <button onclick="buyCoffee('Americano')">Buy Now</button>
+            </div>
+        </article>
+        <aside>
+            <h3>Popular Coffee Types</h3>
+            <ul>
+                <li><a href="#">Espresso</a></li>
+                <li><a href="#">Latte</a></li>
+                <li><a href="#">Cappuccino</a></li>
+                <li><a href="#">Americano</a></li>
+                <li><a href="#">Mocha</a></li>
+            </ul>
+        </aside>
+    </main>
+    <footer>&copy; 2025 My Coffee Shop</footer>
+
+    <script>
+        let cartCount = 0;
+
+        // Buy Coffee Function
+        function buyCoffee(coffeeName) {
+            cartCount++;
+            document.getElementById("cartCount").innerText = cartCount;
+            alert("You added " + coffeeName + " to your cart!");
+        }
+
+        // Live Clock
+        function updateClock() {
+            let now = new Date();
+            document.getElementById("clock").innerHTML = now.toLocaleTimeString();
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Search Filter
+        document.getElementById("searchBar").addEventListener("keyup", function() {
+            let filter = this.value.toLowerCase();
+            let cards = document.querySelectorAll(".coffee-card");
+            cards.forEach(card => {
+                let coffeeName = card.querySelector("h4").innerText.toLowerCase();
+                card.style.display = coffeeName.includes(filter) ? "block" : "none";
+            });
+        });
+
+        // Dark Mode Toggle
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>
