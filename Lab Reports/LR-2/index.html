@@ -1,148 +1,169 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>Responsive CSS Layout</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1rem;
-            text-align: center;
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+      nav {
+        background-color: #333;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      nav a {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+      }
+      nav a:hover {
+        background-color: #575757;
+      }
+      main {
+        display: grid;
+        grid-template-columns: 3fr 1fr; /* Reduced sidebar width */
+        gap: 20px;
+        padding: 20px;
+      }
+      article {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+      }
+      .coffee-card {
+        background: #f4f4f4;
+        padding: 15px;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .coffee-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+      .coffee-card h4 {
+        margin: 10px 0;
+      }
+      .coffee-card button {
+        background: #4caf50;
+        color: white;
+        padding: 8px 15px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        margin-top: 8px;
+      }
+      .coffee-card button:hover {
+        background: #45a049;
+      }
+      aside {
+        background: #f4f4f4;
+        padding: 20px;
+      }
+      aside ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      aside ul li {
+        margin: 8px 0;
+      }
+      aside ul li a {
+        text-decoration: none;
+        color: #333;
+      }
+      aside ul li a:hover {
+        color: #4caf50;
+      }
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 10px;
+        margin-top: 200px;
+      }
+
+      .coffee-card:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s;
+      }
+      .coffee-card img:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        main {
+          grid-template-columns: 1fr;
         }
         nav {
-            background-color: #333;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
+          flex-direction: column;
         }
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-        }
-        nav a:hover {
-            background-color: #575757;
-        }
-        main {
-            display: grid;
-            grid-template-columns: 3fr 1fr; /* Reduced sidebar width */
-            gap: 20px;
-            padding: 20px;
-        }
-        article {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        .coffee-card {
-            background: #f4f4f4;
-            padding: 15px;
-            border-radius: 5px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        .coffee-card img {
-            width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-        .coffee-card h4 {
-            margin: 10px 0;
-        }
-        .coffee-card button {
-            background: #4CAF50;
-            color: white;
-            padding: 8px 15px;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-            margin-top: 8px;
-        }
-        .coffee-card button:hover {
-            background: #45a049;
-        }
-        aside {
-            background: #f4f4f4;
-            padding: 20px;
-        }
-        aside ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        aside ul li {
-            margin: 8px 0;
-        }
-        aside ul li a {
-            text-decoration: none;
-            color: #333;
-        }
-        aside ul li a:hover {
-            color: #4CAF50;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 200px;
-        }
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            main {
-                grid-template-columns: 1fr;
-            }
-            nav {
-                flex-direction: column;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header><h1>My Coffee Shop</h1></header>
     <nav>
-        <a href="#">Home</a>
-        <a href="#">Menu</a>
-        <a href="#">Contact</a>
+      <a href="#">Home</a>
+      <a href="#">Menu</a>
+      <a href="#">Contact</a>
     </nav>
     <main>
-        <article>
-            <div class="coffee-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG" alt="Espresso">
-                <h4>Espresso</h4>
-                <button>Buy Now</button>
-            </div>
-            <div class="coffee-card">
-                <img src="https://livingnomads.com/wp-content/uploads/2019/01/07/Rufous-Coffee-best-cafe-in-taipei-best-coffee-in-taipei-best-coffee-shops-in-taipei-20.jpg" alt="Latte">
-                <h4>Latte</h4>
-                <button>Buy Now</button>
-            </div>
-            <div class="coffee-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Cappuccino_at_Sightglass_Coffee.jpg" alt="Cappuccino">
-                <h4>Cappuccino</h4>
-                <button>Buy Now</button>
-            </div>
-            <div class="coffee-card">
-                <img src="https://media.istockphoto.com/id/1030018926/photo/coffee-americano-it-made-from-espresso-and-hot-water-uk.jpg?s=612x612&w=0&k=20&c=trsNtjalA6r9eGka845eO1nYOP0yogvLWqBAg-jsBlM=">
-                <h4>Americano</h4>
-                <button>Buy Now</button>
-            </div>
-        </article>
-        <aside>
-            <h3>Popular Coffee Types</h3>
-            <ul>
-                <li><a href="#">Espresso</a></li>
-                <li><a href="#">Latte</a></li>
-                <li><a href="#">Cappuccino</a></li>
-                <li><a href="#">Americano</a></li>
-                <li><a href="#">Mocha</a></li>
-            </ul>
-        </aside>
+      <article>
+        <div class="coffee-card">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/4/45/A_small_cup_of_coffee.JPG"
+            alt="Espresso"
+          />
+          <h4>Espresso</h4>
+          <button>Buy Now</button>
+        </div>
+        <div class="coffee-card">
+          <img
+            src="https://livingnomads.com/wp-content/uploads/2019/01/07/Rufous-Coffee-best-cafe-in-taipei-best-coffee-in-taipei-best-coffee-shops-in-taipei-20.jpg"
+            alt="Latte"
+          />
+          <h4>Latte</h4>
+          <button>Buy Now</button>
+        </div>
+        <div class="coffee-card">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Cappuccino_at_Sightglass_Coffee.jpg"
+            alt="Cappuccino"
+          />
+          <h4>Cappuccino</h4>
+          <button>Buy Now</button>
+        </div>
+        <div class="coffee-card">
+          <img
+            src="https://media.istockphoto.com/id/1030018926/photo/coffee-americano-it-made-from-espresso-and-hot-water-uk.jpg?s=612x612&w=0&k=20&c=trsNtjalA6r9eGka845eO1nYOP0yogvLWqBAg-jsBlM="
+          />
+          <h4>Americano</h4>
+          <button>Buy Now</button>
+        </div>
+      </article>
+      <aside>
+        <h3>Popular Coffee Types</h3>
+        <ul>
+          <li><a href="#">Espresso</a></li>
+          <li><a href="#">Latte</a></li>
+          <li><a href="#">Cappuccino</a></li>
+          <li><a href="#">Americano</a></li>
+          <li><a href="#">Mocha</a></li>
+        </ul>
+      </aside>
     </main>
     <footer>&copy; 2025 My Coffee Shop</footer>
-</body>
+  </body>
 </html>
